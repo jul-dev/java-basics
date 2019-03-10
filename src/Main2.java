@@ -5,6 +5,8 @@ public class Main2 {
         System.out.println("Hello World");
         hiThere("Julia");
         hiThere("Good Bye!");
+        String timeOfDay= TimeRelated.timeOfDay(34);
+        System.out.println(timeOfDay);
 
 }
 private static void hiThere(String name ){
