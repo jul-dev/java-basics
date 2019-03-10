@@ -1,9 +1,7 @@
-package com.company;
-
-public class B {
+public class TimeRelated {
     public static void main(String[] args) {
 
-       int time = 22;
+       int time = 50;
 //        timeOfDay(time);
 
         System.out.println(timeOfDay(time));
@@ -11,6 +9,7 @@ public class B {
 
     public static String timeOfDay(int time) {
         String timeofday="";
+        String errMesg= " ";
         //morning 5am-11am
         if(time >= 5&& time <11){
             timeofday="Morning";
@@ -27,10 +26,15 @@ public class B {
             timeofday="Evening";
 //            System.out.println("its the evening ");
         }
+
+        else if((time>=0&&time<=5)||(time>=22&&time<=24)){
+            timeofday="Night";
+
+        }
         //night 22pm-5am
         else{
-            timeofday="Night";
-//            System.out.println("its night");
+            errMesg="Time entered should be between 0-24. But you entered:" + time;
+            return errMesg;
         }
         return timeofday;
     }
