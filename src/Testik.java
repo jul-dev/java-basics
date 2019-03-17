@@ -7,6 +7,8 @@ public class Testik {
 
     public static void main(String[] args) {
 
+
+
         String[] contacts = new String[0];
         String[] words = new String[0];
         int nOfLetters=3; //regulates how many letters displayed in a word

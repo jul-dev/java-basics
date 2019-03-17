@@ -3,7 +3,7 @@
 public class TimeRelated {
     public static void main(String[] args) {
 
-       int time = 50;
+       int time = 17;
 //        timeOfDay(time);
 
         System.out.println(timeOfDay(time));
@@ -18,7 +18,7 @@ public class TimeRelated {
 //            System.out.println("its freaking morning time");
         }
 
-        //day 11am=17pm
+        //day 11am=16pm
         else if(time>=11 && time<17){
             timeofday="Day";
 //            System.out.println("its day time");
@@ -70,5 +70,26 @@ public class TimeRelated {
                 break;
         }
         return season;
+    }
+
+    public static String timeOfDaySwitch(int hour) {
+        String msg="";
+
+        switch (hour){
+            case 22: case 23: case 0: case 1: case 2: case 3: case 4: msg="night";
+            break;
+
+            case 5: case 6: case 7: case 8: case 9: case 10: case 11: msg="morning";
+            break;
+
+            case 12: case 13: case 14: case 15: case 16:  msg="day";
+            break;
+
+            case 17: case 18: case 19: case 20: case 21:  msg="evening";
+            break;
+
+            default: msg="Time entered should be between 0-24. But you entered:" + hour;
+        }
+        return msg;
     }
 }
