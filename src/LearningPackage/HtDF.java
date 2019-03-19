@@ -1,3 +1,5 @@
+package LearningPackage;
+
 import java.util.Scanner;
 
 import static java.util.Scanner.*;

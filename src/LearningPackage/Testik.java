@@ -1,7 +1,6 @@
-//import java.util.Scanner;
+package LearningPackage;//import java.util.Scanner;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 public class Testik {
 

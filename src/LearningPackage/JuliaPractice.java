@@ -1,3 +1,5 @@
+package LearningPackage;
+
 public class JuliaPractice {
 
     public static void main(String[] args){

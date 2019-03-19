@@ -1,4 +1,4 @@
-// 3/10/19 This class has functions that show time of day and time of year
+package LearningPackage;// 3/10/19 This class has functions that show time of day and time of year
 
 public class TimeRelated {
     public static void main(String[] args) {
