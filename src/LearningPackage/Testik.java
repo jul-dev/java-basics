@@ -10,7 +10,7 @@ public class Testik {
 
         String[] contacts = new String[0];
         String[] words = new String[0];
-        int nOfLetters=3; //regulates how many letters displayed in a word
+        int nOfLetters=200; //regulates how many letters displayed in a word
 
 
         try {
