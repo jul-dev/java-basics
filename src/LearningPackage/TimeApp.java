@@ -1,5 +1,6 @@
 package LearningPackage;
 import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Scanner;
 
@@ -15,31 +16,12 @@ public class TimeApp {
         int [] time = timeFromSeconds(seconds);
         System.out.printf(seconds+" seconds = %s hours, %s minutes, %s seconds", time[0],time[1],time[2]);
 
-
-        //Show time to user
-
-
-
     }
-
-//    static void timeFromSeconds(int seconds) {
-//
-//        int hours, mins, sec, rem;
-//
-//        hours= seconds/3600;
-//        rem=seconds%3600;
-//
-//        mins=rem/60;
-//        sec=rem%60;
-//
-//        System.out.printf(seconds+" seconds = %s hours, %s minutes, %s seconds", hours,mins,sec);
-//
-//
-//    }
-    //
+    //parameters time in seconds
+    //returns int Array with 3 elements ; 0=hours, 1=minutes, 2=seconds
+    @NotNull
     @Contract(value = "_ -> new", pure = true)
     static int[] timeFromSeconds(int seconds) {
-
 
         int hours, mins, sec, rem;
 
@@ -53,4 +35,3 @@ public class TimeApp {
     }
 
 }
-
