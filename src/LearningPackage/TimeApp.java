@@ -23,14 +23,14 @@ public class TimeApp {
     @Contract(value = "_ -> new", pure = true)
     static int[] timeFromSeconds(int seconds) {
 
-        int hours, mins, sec, rem;
+    int hours, mins, sec, rem;
 
-        hours= seconds/3600;
-        rem=seconds%3600;
+    hours= seconds/3600;
+    rem=seconds%3600;
 
-        mins=rem/60;
-        sec=rem%60;
-        return new int[] {hours,mins,sec};
+    mins=rem/60;
+    sec=rem%60;
+    return new int[] {hours,mins,sec};
 
     }
 
