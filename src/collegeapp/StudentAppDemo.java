@@ -1,4 +1,4 @@
-package LearningPackage;
+package collegeapp;
 
 public class StudentAppDemo {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package LearningPackage;
+package collegeapp;
 
 import java.time.LocalDate;
 

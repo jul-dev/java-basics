@@ -1,4 +1,4 @@
-package LearningPackage;
+package collegeapp;
 
 public class Student extends Person {
 
@@ -20,10 +20,6 @@ public class Student extends Person {
 
     private String id= "";
     private double gpa=0;
-
-    public Student(){
-        super("O","house","garage");
-    }
 
     @Override
     public String toString(){
