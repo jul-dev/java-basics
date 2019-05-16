@@ -10,6 +10,10 @@ public class Person {
         this.gender=gender;
     }
 
+    public Person(){
+
+    }
+
     private String  gender;
     private String  fname;
     private String  lname;
@@ -17,6 +21,19 @@ public class Person {
     private String  weight;
     private String  height;
     private LocalDate dob;
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "gender='" + gender + '\'' +
+                ", fname='" + fname + '\'' +
+                ", lname='" + lname + '\'' +
+                ", ssn='" + ssn + '\'' +
+                ", weight='" + weight + '\'' +
+                ", height='" + height + '\'' +
+                ", dob=" + dob +
+                '}';
+    }
 
     public LocalDate getDOB() {
         return dob;
@@ -74,5 +91,6 @@ public class Person {
     public void setHeight(String height) {
         this.height = height;
     }
+
 
 }
