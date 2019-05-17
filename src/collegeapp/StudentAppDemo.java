@@ -4,12 +4,15 @@ public class StudentAppDemo {
     static AllStudents objAll;
 
     public static void main(String[] args) {
-        objAll=new AllStudents();
-        run();
-//        objAll.printAllStudents();
-//        printArray(objAll.getAllStudents());
-        System.out.println();
-        testFindStudent(10);
+        Menu menu=new Menu();
+        menu.run();
+//        objAll=new AllStudents();
+//        run();
+////        objAll.printAllStudents();
+////        printArray(objAll.getAllStudents());
+//        System.out.println();
+//        testFindStudent(10);
+
     }
 
     private static void testFindStudent(int i) {
