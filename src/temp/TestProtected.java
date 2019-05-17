@@ -1,9 +1,10 @@
 package temp;
 
 
-import LearningPackage.StudentAppDemo;
+import collegeapp.Student;
+import collegeapp.StudentAppDemo;
 
-public class TestProtected extends LearningPackage.Student {
+public class TestProtected extends Student {
     /*TestProtected(){
         super("f","Cali","Coll");
 */

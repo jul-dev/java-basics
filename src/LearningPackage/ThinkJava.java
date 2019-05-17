@@ -1,5 +1,5 @@
 package LearningPackage;
-import java.util.Scanner;
+import collegeapp.Person;
 
 public class ThinkJava {
     public static void printTime(int hour, int minute) {

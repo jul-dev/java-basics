@@ -2,11 +2,11 @@ package collegeapp;
 
 public class Student extends Person {
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -18,13 +18,14 @@ public class Student extends Person {
         this.gpa = gpa;
     }
 
-    private String id= "";
+    private int id= 0;
     private double gpa=0;
 
     @Override
     public String toString(){
-        return "Student{" +
-                "gender='" + super.getGender() + '\'' +
+        return
+                "Student{" + ", id=" + id +
+                ", gender='" + super.getGender() + '\'' +
                 ", fname='" + super.getFname() +
                 ", lname='" + super.getLname() + '\'' +
                 ", ssn='" + super.getSSN() + '\'' +
@@ -32,7 +33,6 @@ public class Student extends Person {
                 ", height='" + super.getHeight() + '\'' +
                 ", dob=" + super.getDOB() +
                 ", gpa=" + gpa +
-                ", id=" + id +
                 '}';
     }
 }

@@ -1,16 +1,32 @@
 package collegeapp;
 
 public class AllStudents {
-    Student arrStudents []=new Student[10];
+    private Student arrStudents []=new Student[10];
 
     public Student[] getAllStudents() {
         return arrStudents;
     }
 
     public void setStudent(Student student) {
-        int i=findIncertPoint();
+        int i= findInsertPoint();
         if (i!=-1)
             arrStudents[i] = student;
+    }
+    public void printAllStudents(){
+        for (Student s :arrStudents) {
+           if (s!=null)System.out.println(s.toString());
+        }
+    }
+        //finds students by id.
+        // Goes through array and returns 1st student that matches student id.
+    public Student findStudent(int id){
+        for (Student s:arrStudents)
+              {
+            if (s.getId()==id)
+                return s;
+        }
+
+        return null;
     }
 
     public Student getStudent(int id){
@@ -19,7 +35,7 @@ public class AllStudents {
         return arrStudents[id];
     }
 
-    private int findIncertPoint() {
+    private int findInsertPoint() {
         //find first null element in the array and return its index
         for (int i=0; i<arrStudents.length;i++){
             if (arrStudents[i] == null)
@@ -28,8 +44,10 @@ public class AllStudents {
         //add 10 elements to array
         Student temArr[]=new Student[arrStudents.length+10];
         System.arraycopy(arrStudents,0,temArr,0,arrStudents.length);
+        //insertion point with the length of old array
+        int insPoint =arrStudents.length;
         arrStudents=temArr;
-        return -1;
+        return insPoint;
     }
 
 
