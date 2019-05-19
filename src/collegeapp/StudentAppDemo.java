@@ -1,22 +1,23 @@
 package collegeapp;
 
 public class StudentAppDemo {
-    static AllStudents objAll;
+    static AllStudents allStudents;
 
     public static void main(String[] args) {
         Menu menu=new Menu();
+        allStudents=new AllStudents();
         menu.run();
-//        objAll=new AllStudents();
+//        allStudents=new AllStudents();
 //        run();
-////        objAll.printAllStudents();
-////        printArray(objAll.getAllStudents());
+////        allStudents.printAllStudents();
+////        printArray(allStudents.getAllStudents());
 //        System.out.println();
 //        testFindStudent(10);
 
     }
 
     private static void testFindStudent(int i) {
-        System.out.println(objAll.findStudent(i));
+        System.out.println(allStudents.findStudent(i));
     }
 
     public static void run(){
@@ -32,7 +33,7 @@ public class StudentAppDemo {
              obj.setLname("Alcantara");
              obj.setWeight("189");
 //             System.out.println(obj);
-            objAll.setStudent(obj);
+            allStudents.setStudent(obj);
 
          }
     }

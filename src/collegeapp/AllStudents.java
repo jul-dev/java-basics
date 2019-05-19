@@ -1,10 +1,42 @@
 package collegeapp;
 
+import java.awt.*;
+import java.util.Scanner;
+
 public class AllStudents {
     private Student arrStudents []=new Student[10];
+    Scanner sc=new Scanner(System.in);
 
     public Student[] getAllStudents() {
         return arrStudents;
+    }
+
+    public void addNewStudent() {
+        System.out.println("New Student registration menu");
+        System.out.println();
+        Student student=new Student();
+        System.out.println("Please enter your first name");
+        sc.nextLine();
+        student.setFname(sc.nextLine());
+        System.out.println("Please enter your last name");
+        student.setLname(sc.nextLine());
+        System.out.println("What is your gender");
+        student.setGender(sc.nextLine());
+        System.out.println("Please enter your SS#");
+        student.setSSN(sc.nextLine());
+        System.out.println("Please enter your DOB 'YYYY/MM/DD'");
+        String dob=sc.nextLine();
+        System.out.println(dob);
+        int[] date=MyUtil.convertStringToDateArray(dob); //array contains year index 0, month index 1, date index 2
+        student.setDOB(date[0],date[1],date[2]);
+        System.out.println("Please enter your weight");
+        student.setWeight(sc.nextLine());
+        System.out.println("Please enter your height");
+        student.setHeight(sc.nextLine());
+        student.setId(MyUtil.generateStudentId());
+        System.out.println("Your student id is : " +student.getId()+" Please take a note of it.");
+        StudentAppDemo.allStudents.setStudent(student);
+//        StudentAppDemo.allStudents.printAllStudents();
     }
 
     public void setStudent(Student student) {

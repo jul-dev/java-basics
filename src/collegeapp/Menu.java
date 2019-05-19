@@ -1,9 +1,11 @@
 package collegeapp;
 
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Menu {
     Scanner sc=new Scanner(System.in);
+    AllStudents setStudent=new AllStudents();
 
     public void run() {
         while (true){
@@ -74,7 +76,7 @@ public class Menu {
     }
 
     private void displayNewStudentRegistration() {
-        System.out.println("New Student registration menu");
+      StudentAppDemo.allStudents.addNewStudent();
     }
 
     private void displayAdminMenu() {
