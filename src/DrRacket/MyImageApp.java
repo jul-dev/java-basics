@@ -1,4 +1,4 @@
-package LearningPackage.DrRacket;
+package DrRacket;
 
 public class MyImageApp {
     public static void main(String[] args) {
