@@ -4,13 +4,13 @@ public class Loops {
     private static  int [] createNumberArray(int num){
          int[] numbers = new int[num];
 
-        for(int i=2; i< numbers.length; i+=2)
-            numbers[i]=i;
+        for(int i=0; i< numbers.length; i++) {
+            numbers[i] = i * 2;
+        }
             return numbers;
     }
-
     public static void main(String[] args) {
-        for (int i: createNumberArray(100))
+        for (int i: createNumberArray(50))
             System.out.println(i);
         //forPrint(createNumberArray(100));
 
