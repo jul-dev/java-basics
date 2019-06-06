@@ -20,8 +20,14 @@ public class App  {
     }
     public static void main(String[] args) {
 
+
+
         for (Animal a : createAnimalArray(100)){
             a.animalSound();
+            a.setName("coco");
+            a.setBreed("Yorki");
+            a.setDOB("12/22/2018");
+            System.out.println(a.toString());
         }
     }
 }
