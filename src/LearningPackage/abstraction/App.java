@@ -16,17 +16,22 @@ public class App{
        arr [2]=bir;
        arr [3]=tran;
 
-       arr[4]=new Airplane("WOW","FX100");
-       arr[5]=new Person("Andrew", 200);
-       arr[6]=new Bird("Robin", "Robin");
+       arr[4]=new Airplane("WOW2","FX100");
+       arr[5]=new Person("Andrew2", 200);
+       arr[6]=new Bird("Robin2", "Robin");
 
         for (IMovable o : arr) {
            if (o != null ){
                o.move();
+               ((IEnergy) o).getEnergy();
+
+//               if (o instanceof Airplane){
+//                   ((IEnergy) o).getEnergy();
+//               }
            }
         }
 
-        Airplane a=(Airplane) arr[1];
+        Airplane a=(Airplane) arr[0];
         System.out.println(a.getName());
 
 

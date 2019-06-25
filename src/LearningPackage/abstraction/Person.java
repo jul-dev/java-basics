@@ -1,6 +1,6 @@
 package LearningPackage.abstraction;
 
-class Person implements IMovable {
+class Person implements IMovable, IEnergy {
 
     public Person(String name, int weight) {
         this.name = name;
@@ -29,5 +29,10 @@ class Person implements IMovable {
     @Override
     public void move() {
         System.out.println("Person " + name + " walked 8 miles");
+    }
+
+    @Override
+    public void getEnergy() {
+        System.out.println("I ate a lot of Spinach today !");
     }
 }

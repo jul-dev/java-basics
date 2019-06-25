@@ -1,6 +1,7 @@
 package LearningPackage.abstraction;
 
-class Airplane implements IMovable{
+
+class Airplane implements IMovable, IEnergy{
 
     private String name;
     private String model;
@@ -29,5 +30,11 @@ class Airplane implements IMovable{
     @Override
     public void move() {
         System.out.println("Airplane "+ name + " flew 3,100 miles");
+    }
+
+    @Override
+    public void getEnergy() {
+        System.out.println("Airplane uses fuel");
+
     }
 }
