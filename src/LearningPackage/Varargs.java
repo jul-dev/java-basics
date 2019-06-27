@@ -1,3 +1,4 @@
+/*
 package LearningPackage;
 
 public class Varargs {
@@ -11,7 +12,7 @@ public class Varargs {
     }
 
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         varargs(23,23,"Julia");
         varargs(12,23,"hello","Julia","How are you","whats new","im good");
 
@@ -19,3 +20,4 @@ public class Varargs {
 }
 
 
+*/
