@@ -63,6 +63,7 @@ public class Menu {
     }
 
     private void displayStudentSummery() {
+
     }
 
     private void displaySettingMenu() {
@@ -73,6 +74,30 @@ public class Menu {
 
     private void displayUpStudentInfo() {
         System.out.println("Student info update menu");
+        sc.nextLine();
+        System.out.println();
+        System.out.println("Please enter your student ID");
+
+        int studentId;
+
+        while (true) {
+            try {
+                studentId = sc.nextInt();
+                break;
+            }
+            catch (Exception e){
+                System.out.println("Please enter your ID that was created when you registered, Example 100.");
+            }
+        }
+
+        Student st = StudentAppDemo.allStudents.findStudent(studentId);
+        System.out.println(st.toString());
+
+        System.out.println("1-Update student weight, 2-Update first name, 3-Update last name.");
+        int choice=sc.nextInt();
+//        if (choice==1) updateStudentRecord();
+//        if (choice==2) updateStudentRecord();
+//        if (choice==3) udpadeStudentRecord();
     }
 
     private void displayNewStudentRegistration() {

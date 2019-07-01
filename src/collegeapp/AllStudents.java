@@ -14,7 +14,9 @@ public class AllStudents {
     public void addNewStudent() {
         System.out.println("New Student registration menu");
         System.out.println();
+
         Student student=new Student();
+
         System.out.println("Please enter your first name");
         sc.nextLine();
         student.setFname(sc.nextLine());
