@@ -1,22 +1,36 @@
 package collegeapp;
 
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class AllStudents {
-    private Student arrStudents []=new Student[10];
+
+    private static final String filePath="C:\\temp\\julia's_file.txt";
+
+    private static Student arrStudents []=new Student[10];
     Scanner sc=new Scanner(System.in);
 
     public Student[] getAllStudents() {
         return arrStudents;
     }
 
+        //saves info from arrStudents to file specified by filePath
+    public void saveStudents(){
+        createFile(filePath);
+        writeToFile(filePath, arrStudents);
+
+    }
+
+
+
     public void addNewStudent() {
         System.out.println("New Student registration menu");
         System.out.println();
-
         Student student=new Student();
-
         System.out.println("Please enter your first name");
         sc.nextLine();
         student.setFname(sc.nextLine());
@@ -38,6 +52,7 @@ public class AllStudents {
         student.setId(MyUtil.generateStudentId());
         System.out.println("Your student id is : " +student.getId()+" Please take a note of it.");
         StudentAppDemo.allStudents.setStudent(student);
+        saveStudents();
 //        StudentAppDemo.allStudents.printAllStudents();
     }
 
@@ -84,6 +99,54 @@ public class AllStudents {
         return insPoint;
     }
 
+//FileOperations
 
+
+
+     static void writeToFile(String fp, Student [] stArr) {
+        try {
+            FileWriter myWriter = new FileWriter(fp);
+            for (Student st: arrStudents ){
+               if (st!=null)myWriter.write(st.toString()+"\n");
+
+            }
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+
+        }
+         System.out.println("inside write ToFile Method ");
+    }
+
+    static void readFromFile(String fp) {
+        try {
+            File myObj = new File(fp);
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                System.out.println(data);
+            }
+            myReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
+
+     static void createFile(String fp) {
+        try {
+            File myObj = new File(fp);
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
 
 }

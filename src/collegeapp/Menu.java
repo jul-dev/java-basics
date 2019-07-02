@@ -17,6 +17,7 @@ public class Menu {
         System.out.println("MAIN MENU");
         System.out.println();
         System.out.println("1-Student, 2-Admin, 3-Exit");
+
         int choice=sc.nextInt();
         displayMenu(choice);
     }

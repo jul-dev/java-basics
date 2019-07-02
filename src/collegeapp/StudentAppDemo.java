@@ -1,11 +1,16 @@
 package collegeapp;
 
+import java.util.Arrays;
+
 public class StudentAppDemo {
     static AllStudents allStudents;
 
     public static void main(String[] args) {
         Menu menu=new Menu();
         allStudents=new AllStudents();
+        System.out.println(Arrays.toString(allStudents.getAllStudents()));
+
+
         menu.run();
 //        allStudents=new AllStudents();
 //        run();

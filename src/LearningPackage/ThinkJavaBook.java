@@ -1,7 +1,7 @@
 package LearningPackage;
 import collegeapp.Person;
 
-public class ThinkJava {
+public class ThinkJavaBook {
     public static void printTime(int hour, int minute) {
         System.out.print(hour);
         System.out.print(":");
